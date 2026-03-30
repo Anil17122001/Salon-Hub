@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Appointment</title>
+<link rel="stylesheet" href="bookig.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo"><a href="index.html">SalonHub</a></div>
+  </div>
+</header>
+
+<section class="hero-book">
+  <div class="hero-content">
+    <h1>Book Your Appointment</h1>
+    <p>Select Shop, Service, Worker & Time – Smart Price Auto System</p>
+  </div>
+</section>
+
+<section class="booking">
+  <h2>Booking Details</h2>
+  <form id="bookingForm">
+
+    <select id="shop" required>
+      <option value="">Select Shop</option>
+      <option value="SalonHub - Branch 1">SalonHub - Branch 1</option>
+      <option value="SalonHub - Branch 2">SalonHub - Branch 2</option>
+    </select>
+
+    <div class="form-row">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+    </div>
+
+    <select id="service" required>
+      <option value="">Select Service</option>
+      <option value="Haircut">Haircut</option>
+      <option value="Facial">Facial</option>
+      <option value="Makeup">Makeup</option>
+      <option value="Spa">Spa</option>
+    </select>
+
+    <select id="worker" required>
+      <option value="">Select Worker</option>
+      <option value="A">Worker A</option>
+      <option value="B">Worker B</option>
+      <option value="C">Worker C</option>
+    </select>
+
+    <div class="form-row">
+      <input type="date" id="date" required>
+      <input type="time" id="time" required>
+    </div>
+
+    <div class="price-summary">
+      <strong>Total Price: ₹<span id="price">0</span></strong>
+    </div>
+
+    <textarea id="message" placeholder="Additional Notes (optional)"></textarea>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<script src="bookig.js"></script>
+</body>
+</html>

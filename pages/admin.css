@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("../assets/images/salon2.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header h2 {
+  text-shadow: 0 0 10px #00c8ff;
+  animation: glowText 2s infinite alternate;
+}
+
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #ffffff;
+  }
+  to {
+    text-shadow: 0 0 15px #00aaff;
+  }
+}
+
+header .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#logoutBtn {
+  padding: 8px 15px;
+  border: none;
+  background: #ff4d4d;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.6);
+}
+
+#logoutBtn:hover {
+  background: #d90000;
+  transform: scale(1.05);
+}
+
+
+.login-box {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 60px auto;
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeSlide 0.8s ease;
+  color: white;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-box input::placeholder {
+  color: #e5e5e5;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 15px rgba(0, 123, 255, 0.5);
+}
+
+.login-box button:hover {
+  background: #0063d1;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+table {
+  width: 95%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+table thead {
+  background: rgba(0, 123, 255, 0.6);
+  color: white;
+  backdrop-filter: blur(8px);
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+  color: white;
+  font-size: 15px;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transition: 0.3s ease;
+}
+
+
+td button {
+  padding: 7px 14px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+td button:hover {
+  background: #d90000;
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  th,
+  td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

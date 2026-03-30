@@ -1,0 +1,51 @@
+*{
+  margin:0; padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+header{
+  background:#222; padding:18px 0; color:#fff;
+}
+.container{
+  width:90%; margin:auto; display:flex;
+  justify-content:space-between; align-items:center;
+}
+.logo a{
+  color:white; font-size:22px; text-decoration:none; font-weight:bold;
+}
+
+.hero-book{
+  background:#f8e7dd; padding:50px 0; text-align:center;
+}
+
+.booking{
+  width:90%; max-width:650px; margin:40px auto;
+  background:#fff; padding:25px;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.booking h2{
+  text-align:center; margin-bottom:15px;
+}
+
+.form-row{ display:flex; gap:10px; }
+
+input, select, textarea{
+  width:100%; padding:12px; margin:10px 0;
+  border-radius:6px; border:1px solid #ccc; font-size:16px;
+}
+
+button{
+  width:100%; padding:12px;
+  background:#ff7a3d; border:none; color:white;
+  font-size:18px; cursor:pointer; border-radius:6px;
+}
+button:hover{ background:#e0672f; }
+
+.price-summary{
+  font-size:18px;
+  margin-bottom:10px;
+  font-weight:bold;
+}
